@@ -1,0 +1,8 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xyz-casbin-server
+  labels:
+    app: xyz-casbin-server
+spec:
+  replicas: 1

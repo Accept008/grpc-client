@@ -1,0 +1,14 @@
+p, cjc, acrn:smc:pushing:*:vod:ListMusics, pushing:ListMusics, allow
+p, cjc, acrn:smc:pushing:*:vod:DescribeMusic, pushing:DescribeMusic, allow
+p, cjc, acrn:smc:pushing:*:vod:CreateMusic, pushing:CreateMusic, allow
+p, cjc, acrn:smc:pushing:*:vod:UpdateMusic, pushing:UpdateMusic, allow
+p, cjc, acrn:smc:pushing:*:vod:DeleteMusic, pushing:UpdateMusic, allow
+
+p, zym, acrn:smc:pushing:*:vod:ListMusics, pushing:ListMusics, allow
+p, zym, acrn:smc:pushing:*:vod:DescribeMusic, pushing:DescribeMusic, allow
+
+p, je, acrn:smc:pushing:*:vod:DescribeMusic, pushing:DescribeMusic, allow
+
+p, david, *, *, allow
+
+p, alice, *, List*, allow

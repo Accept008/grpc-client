@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: xyz-casbin-server
+  labels:
+    app: xyz-casbin-server
+spec:
+  clusterIP: None
+  ports:
+    - port: 50051
+      name: xyz-casbin-server
+  selector:
+    app: xyz-casbin-server
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: xyz-casbin-server
+  labels:
+    app: xyz-casbin-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: xyz-casbin-server
+  template:
+    metadata:
+      labels:
+        app: xyz-casbin-server
+    spec:
+      containers:
+      - name: xyz-casbin-server
+        image: registry.cn-hangzhou.aliyuncs.com/xyz/xyz-casbin-server:1.0.1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 50051

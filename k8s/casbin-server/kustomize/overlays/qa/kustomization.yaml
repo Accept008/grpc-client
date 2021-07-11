@@ -1,0 +1,18 @@
+bases:
+  - ../../base
+namespace: xyz-qa
+generatorOptions:
+  disableNameSuffixHash: true
+configMapGenerator:
+- name: xyz-casbin-server-config
+  literals:
+  - AUDIT_ENV=qa
+secretGenerator:
+- name: xyz-casbin-server-secret
+  literals:
+  - SOP_PLATFROM_DB_PASSWORD=1ZVggYAmSIO5ZOr3
+patchesStrategicMerge:
+  - deployment.yaml
+images:
+  - name: registry.cn-hangzhou.aliyuncs.com/xyz/xyz-casbin-server
+    newTag: 1.0.8
